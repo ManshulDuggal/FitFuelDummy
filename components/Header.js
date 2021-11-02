@@ -5,7 +5,7 @@ import { ShoppingCartIcon, HomeIcon, SearchIcon } from "@heroicons/react/solid";
 
 const Header = () => {
     return (
-        <header className="flex flex-col m-5 sm:flex-row justify-between items-center h-auto">
+        <header className="flex flex-col ml-5 sm:flex-row justify-between items-center h-auto">
             <Image
                 className="object-contain"
                 src={Logo}
