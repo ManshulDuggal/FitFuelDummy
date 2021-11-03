@@ -6,8 +6,7 @@ import { ArrowCircleUpIcon } from "@heroicons/react/solid";
 import ProductsSection from "../components/ProductsSection";
 import Base_URL from "../utils/requests";
 import axios from "axios";
-export default function Home({ items }) {
-    console.log("items", items);
+export default function Home({ products }) {
     return (
         <div>
             <Head>
@@ -24,15 +23,24 @@ export default function Home({ items }) {
             <SectionsBanner />
 
             {/* Section For Products */}
-            <ProductsSection items={items} />
+            <ProductsSection products={products} />
         </div>
     );
 }
 
-export async function getServerSideProps(context) {
-    const { data } = await axios.get(Base_URL);
+// export async function getServerSideProps(context) {
+//     const { products } = await axios.get(Base_URL);
 
+//     return {
+//         props: { products },
+//     };
+// }
+
+export async function getServerSideProps(context) {
+    const products = await fetch(Base_URL).then((res) => res.json());
     return {
-        props: { items: data.items ?? null },
+        props: {
+            products: products,
+        },
     };
 }

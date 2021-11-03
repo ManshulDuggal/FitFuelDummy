@@ -1,10 +1,23 @@
-const ProductsSection = ({ items }) => {
+import Card from "./Card";
+
+Card;
+const ProductsSection = ({ products }) => {
     return (
         <div>
             <div>
-                {items.map((items) => (
-                    <h1>{items.slug}</h1>
-                ))}
+                {products.map(
+                    ({ title, id, price, description, category, image }) => (
+                        <Card
+                            title={title}
+                            id={id}
+                            price={price}
+                            category={category}
+                            description={description}
+                            image={image}
+                            key={id}
+                        />
+                    )
+                )}
             </div>
         </div>
     );
