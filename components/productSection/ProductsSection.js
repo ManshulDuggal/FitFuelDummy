@@ -1,10 +1,10 @@
-import Card from "./Card";
-
+import Card from "../card/Card";
+import styles from "./product.module.css";
 Card;
 const ProductsSection = ({ products }) => {
     return (
         <div>
-            <div>
+            <div className={styles.card}>
                 {products.map(
                     ({ title, id, price, description, category, image }) => (
                         <Card

@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import SectionsBanner from "../components/SectionsBanner";
 import { ArrowCircleUpIcon } from "@heroicons/react/solid";
-import ProductsSection from "../components/ProductsSection";
+import ProductsSection from "../components/productSection/ProductsSection";
 import Base_URL from "../utils/requests";
 import axios from "axios";
 export default function Home({ products }) {

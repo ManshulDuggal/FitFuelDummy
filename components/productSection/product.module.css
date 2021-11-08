@@ -1,0 +1,3 @@
+.card{
+    @apply flex flex-row overflow-x-scroll overflow-y-hidden h-96
+  }

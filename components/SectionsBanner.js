@@ -12,13 +12,9 @@ const SectionsBanner = () => {
                 infiniteLoop
                 showStatus={false}
                 showIndicators={false}
-                showThumbs={true}
+                showThumbs={false}
                 interval={3000}
             >
-                {/* <ArrowLeftIcon
-                    width={10}
-                    className="absolute top-60 left-5 cursor-pointer z-10"
-                /> */}
                 <div>
                     <Image
                         loading="lazy"
