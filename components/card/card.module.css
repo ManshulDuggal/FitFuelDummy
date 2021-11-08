@@ -1,3 +1,17 @@
-.card{
-    @apply relative flex flex-col cursor-pointer bg-white m-2 flex-grow text-black justify-center items-center text-center
+.Card{
+    @apply md:flex items-center md:p-4 relative cursor-pointer flex-grow text-black
+  }
+
+
+  .currency{
+    @apply flex flex-row justify-between my-8
+  }
+
+
+  .cardContent {
+    @apply w-80 text-justify m-4 h-28 overflow-y-scroll
+  }
+
+  .cardTitle{
+    @apply font-bold
   }

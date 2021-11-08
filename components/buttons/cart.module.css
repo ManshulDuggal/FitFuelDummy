@@ -1,0 +1,7 @@
+.btnCart {
+    @apply bg-yellow-300 flex w-full text-sm justify-center  
+}
+.btnText {
+    @apply w-28 p-3  
+}
+

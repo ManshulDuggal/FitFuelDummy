@@ -4,7 +4,7 @@ Card;
 const ProductsSection = ({ products }) => {
     return (
         <div>
-            <div className={styles.card}>
+            <div className={styles.productlist}>
                 {products.map(
                     ({ title, id, price, description, category, image }) => (
                         <Card
