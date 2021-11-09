@@ -1,3 +1,4 @@
 .productlist{
-    @apply flex flex-row overflow-x-scroll overflow-y-hidden p-5 m-4 items-center text-center  bg-white 
+    @apply flex flex-row overflow-x-auto scrollbar-thin p-2 mx-4 my-5 items-center text-center 
   }
+

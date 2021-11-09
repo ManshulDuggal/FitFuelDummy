@@ -5,7 +5,7 @@ import SectionsBanner from "../components/SectionsBanner";
 import { ArrowCircleUpIcon } from "@heroicons/react/solid";
 import ProductsSection from "../components/productSection/ProductsSection";
 import Base_URL from "../utils/requests";
-import axios from "axios";
+import Articles from "../components/articles/Articles";
 export default function Home({ products }) {
     return (
         <div>
@@ -24,6 +24,9 @@ export default function Home({ products }) {
 
             {/* Section For Products */}
             <ProductsSection products={products} />
+
+            {/* Articles Section */}
+            <Articles />
         </div>
     );
 }

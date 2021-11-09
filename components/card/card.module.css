@@ -1,5 +1,5 @@
-.Card{
-    @apply md:flex items-center md:p-4 relative cursor-pointer flex-grow text-black
+.card{
+    @apply md:flex items-center md:p-4 relative cursor-pointer flex-grow text-black bg-white mx-14
   }
 
 
@@ -9,7 +9,8 @@
 
 
   .cardContent {
-    @apply w-80 text-justify m-4 h-28 overflow-y-scroll
+    
+    @apply w-80 text-justify m-4 p-5 h-28 overflow-y-scroll scrollbar-thin
   }
 
   .cardTitle{

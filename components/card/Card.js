@@ -4,7 +4,7 @@ import styles from "../../components/card/card.module.css";
 import Cart from "../buttons/Cart";
 const Card = ({ title, description, category, image, id, price }) => {
     return (
-        <div className={styles.Card}>
+        <div className={styles.card}>
             <div className="p-5">
                 <Image
                     src={image}

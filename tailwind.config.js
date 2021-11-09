@@ -7,21 +7,15 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
-            keyframes: {
-                // wiggle: {
-                //     "0%,100%": {
-                //         transform: "rotate(90deg)",
-                //     },
-                //     "100%": {
-                //         transform: "rotate(90deg)",
-                //     },
-                // },
-            },
+            keyframes: {},
             animation: {
                 wiggle: "wiggle 2s rotate-180 ease-in",
             },
         },
     },
     variants: {},
-    plugins: [],
+    plugins: [
+        //scrollbar
+        require("tailwind-scrollbar"),
+    ],
 };
