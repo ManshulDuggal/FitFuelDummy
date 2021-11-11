@@ -1,12 +1,13 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
-import SectionsBanner from "../components/SectionsBanner";
-import { ArrowCircleUpIcon } from "@heroicons/react/solid";
+import Header from "../components/header/Header";
+import Navbar from "../components/navbar/Navbar";
+import SectionsBanner from "../components/section/SectionsBanner";
 import ProductsSection from "../components/productSection/ProductsSection";
-import Base_URL from "../utils/requests";
+import { ArrowCircleUpIcon } from "@heroicons/react/solid";
 import Articles from "../components/articles/Articles";
-export default function Home({ products }) {
+import Base_URL, { Base_URL_NEWS } from "../utils/requests";
+
+export default function Home({ products, news }) {
     return (
         <div>
             <Head>
@@ -26,7 +27,7 @@ export default function Home({ products }) {
             <ProductsSection products={products} />
 
             {/* Articles Section */}
-            <Articles />
+            <Articles news={news} />
         </div>
     );
 }
@@ -41,9 +42,11 @@ export default function Home({ products }) {
 
 export async function getServerSideProps(context) {
     const products = await fetch(Base_URL).then((res) => res.json());
+    const news = await fetch(Base_URL_NEWS).then((res) => res.json());
     return {
         props: {
             products: products,
+            news: news.articles,
         },
     };
 }

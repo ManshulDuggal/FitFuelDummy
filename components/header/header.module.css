@@ -1,0 +1,8 @@
+.headerBar{
+   @apply flex flex-col ml-5 sm:flex-row justify-between items-center h-auto
+}
+
+
+.headerItems{
+    @apply flex flex-grow text-xs justify-evenly max-w-md sm:flex-row m-5
+}
